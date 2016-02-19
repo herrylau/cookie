@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>cookie</title>
+<script src="jquery.cookie.js"></script>
+</head>
+<body>
+<script>
+$(function () {
+	var mask = $('<div class="mask"></div>');
+	var div= $('.div');
+
+	if(!$.cookie('HASPOPUP')){
+	  $('body').append(mask);
+	  
+	  //Ö´ÐÐ´úÂë
+	  /*ÀýÈç£º
+		$('body').append(mask);
+		mask.fadeIn(500);
+		div.fadeIn(500);
+	  */
+	  
+	  $.cookie('HASPOPUP','true');
+	}
+}
+</script>
+</body>
+</html>
